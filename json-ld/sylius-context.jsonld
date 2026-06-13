@@ -1,0 +1,296 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "sylius": "https://sylius.com/schemas/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Product": {
+      "@id": "sylius:Product",
+      "@context": {
+        "id": {
+          "@id": "sylius:productId",
+          "@type": "xsd:string"
+        },
+        "code": {
+          "@id": "sylius:productCode",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "slug": {
+          "@id": "sylius:slug",
+          "@type": "xsd:string"
+        },
+        "enabled": {
+          "@id": "sylius:enabled",
+          "@type": "xsd:boolean"
+        },
+        "variants": {
+          "@id": "sylius:hasVariant",
+          "@type": "@id"
+        },
+        "taxons": {
+          "@id": "schema:category",
+          "@type": "@id"
+        },
+        "createdAt": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "updatedAt": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "ProductVariant": {
+      "@id": "sylius:ProductVariant",
+      "@context": {
+        "id": {
+          "@id": "sylius:variantId",
+          "@type": "xsd:string"
+        },
+        "code": {
+          "@id": "sylius:variantCode",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "price": {
+          "@id": "schema:price",
+          "@type": "xsd:integer"
+        },
+        "originalPrice": {
+          "@id": "sylius:originalPrice",
+          "@type": "xsd:integer"
+        },
+        "onHand": {
+          "@id": "sylius:onHand",
+          "@type": "xsd:integer"
+        },
+        "tracked": {
+          "@id": "sylius:tracked",
+          "@type": "xsd:boolean"
+        },
+        "enabled": {
+          "@id": "sylius:enabled",
+          "@type": "xsd:boolean"
+        }
+      }
+    },
+    "Order": {
+      "@id": "sylius:Order",
+      "@context": {
+        "id": {
+          "@id": "sylius:orderId",
+          "@type": "xsd:string"
+        },
+        "number": {
+          "@id": "sylius:orderNumber",
+          "@type": "xsd:string"
+        },
+        "state": {
+          "@id": "sylius:orderState",
+          "@type": "xsd:string"
+        },
+        "total": {
+          "@id": "schema:totalPrice",
+          "@type": "xsd:integer"
+        },
+        "itemsTotal": {
+          "@id": "sylius:itemsTotal",
+          "@type": "xsd:integer"
+        },
+        "currencyCode": {
+          "@id": "schema:currency",
+          "@type": "xsd:string"
+        },
+        "customer": {
+          "@id": "schema:customer",
+          "@type": "@id"
+        },
+        "items": {
+          "@id": "schema:orderedItem",
+          "@type": "@id"
+        },
+        "payments": {
+          "@id": "sylius:hasPayment",
+          "@type": "@id"
+        },
+        "shipments": {
+          "@id": "sylius:hasShipment",
+          "@type": "@id"
+        },
+        "checkoutCompletedAt": {
+          "@id": "sylius:checkoutCompletedAt",
+          "@type": "xsd:dateTime"
+        },
+        "createdAt": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Customer": {
+      "@id": "sylius:Customer",
+      "@context": {
+        "id": {
+          "@id": "sylius:customerId",
+          "@type": "xsd:string"
+        },
+        "email": {
+          "@id": "schema:email",
+          "@type": "xsd:string"
+        },
+        "firstName": {
+          "@id": "schema:givenName",
+          "@type": "xsd:string"
+        },
+        "lastName": {
+          "@id": "schema:familyName",
+          "@type": "xsd:string"
+        },
+        "phoneNumber": {
+          "@id": "schema:telephone",
+          "@type": "xsd:string"
+        },
+        "gender": {
+          "@id": "schema:gender",
+          "@type": "xsd:string"
+        },
+        "birthday": {
+          "@id": "schema:birthDate",
+          "@type": "xsd:date"
+        },
+        "subscribedToNewsletter": {
+          "@id": "sylius:subscribedToNewsletter",
+          "@type": "xsd:boolean"
+        },
+        "createdAt": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Payment": {
+      "@id": "sylius:Payment",
+      "@context": {
+        "id": {
+          "@id": "sylius:paymentId",
+          "@type": "xsd:string"
+        },
+        "state": {
+          "@id": "sylius:paymentState",
+          "@type": "xsd:string"
+        },
+        "amount": {
+          "@id": "schema:price",
+          "@type": "xsd:integer"
+        },
+        "currencyCode": {
+          "@id": "schema:currency",
+          "@type": "xsd:string"
+        },
+        "method": {
+          "@id": "sylius:paymentMethod",
+          "@type": "@id"
+        }
+      }
+    },
+    "Shipment": {
+      "@id": "sylius:Shipment",
+      "@context": {
+        "id": {
+          "@id": "sylius:shipmentId",
+          "@type": "xsd:string"
+        },
+        "state": {
+          "@id": "sylius:shipmentState",
+          "@type": "xsd:string"
+        },
+        "tracking": {
+          "@id": "sylius:trackingCode",
+          "@type": "xsd:string"
+        },
+        "method": {
+          "@id": "sylius:shippingMethod",
+          "@type": "@id"
+        }
+      }
+    },
+    "Taxon": {
+      "@id": "sylius:Taxon",
+      "@context": {
+        "id": {
+          "@id": "sylius:taxonId",
+          "@type": "xsd:string"
+        },
+        "code": {
+          "@id": "sylius:taxonCode",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "slug": {
+          "@id": "sylius:slug",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "parent": {
+          "@id": "schema:parentOrganization",
+          "@type": "@id"
+        },
+        "children": {
+          "@id": "sylius:hasChild",
+          "@type": "@id"
+        }
+      }
+    },
+    "Channel": {
+      "@id": "sylius:Channel",
+      "@context": {
+        "id": {
+          "@id": "sylius:channelId",
+          "@type": "xsd:string"
+        },
+        "code": {
+          "@id": "sylius:channelCode",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "hostname": {
+          "@id": "schema:url",
+          "@type": "xsd:string"
+        },
+        "baseCurrency": {
+          "@id": "schema:currency",
+          "@type": "@id"
+        },
+        "defaultLocale": {
+          "@id": "sylius:defaultLocale",
+          "@type": "@id"
+        },
+        "enabled": {
+          "@id": "sylius:enabled",
+          "@type": "xsd:boolean"
+        }
+      }
+    }
+  }
+}

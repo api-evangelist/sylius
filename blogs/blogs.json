@@ -1,0 +1,14 @@
+{
+  "repo": "sylius",
+  "feeds": [
+    {
+      "source": "https://sylius.com/blog/",
+      "feed_url": "https://sylius.com/blog/",
+      "title": "Sylius Blog",
+      "saved": 5,
+      "method": "html"
+    }
+  ],
+  "post_count": 5,
+  "fetched": "2026-06-13T00:00:00Z"
+}
