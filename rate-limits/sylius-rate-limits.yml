@@ -1,0 +1,34 @@
+name: Sylius API Rate Limits
+description: Sylius is a self-hosted open-source platform. The framework itself does not impose built-in API rate limits. Rate limiting is the responsibility of the operator and is typically implemented at the infrastructure layer (web server, reverse proxy, or API gateway).
+url: https://docs.sylius.com/
+
+rate_limits:
+  platform_enforced: false
+  notes: >
+    Sylius does not enforce API rate limits natively. As a self-hosted PHP/Symfony application,
+    any rate limiting must be configured by the deploying organization at the infrastructure level.
+
+infrastructure_rate_limiting:
+  - layer: Web Server (Nginx / Apache)
+    description: Operators can configure request rate limiting using Nginx's limit_req_zone or Apache's mod_ratelimit directives at the server level.
+    example: "limit_req_zone $binary_remote_addr zone=api:10m rate=60r/m;"
+
+  - layer: Reverse Proxy / CDN
+    description: Cloudflare, AWS CloudFront, or similar CDN/proxy layers can be placed in front of Sylius to enforce rate limits, DDoS protection, and throttling for API consumers.
+
+  - layer: Symfony Rate Limiter
+    description: Symfony's Rate Limiter component (available since Symfony 5.2) can be integrated into Sylius to add per-user or per-IP request throttling at the application layer.
+    reference: https://symfony.com/doc/current/rate_limiter.html
+
+  - layer: API Gateway
+    description: Organizations using AWS API Gateway, Kong, or similar API management layers in front of Sylius can enforce quotas, burst limits, and per-key throttling policies.
+
+authentication_limits:
+  jwt_token_expiry: Configurable (default typically 1 hour for access tokens)
+  refresh_tokens: Supported; expiry is configurable in lexik/jwt-authentication-bundle
+
+recommendations:
+  - Implement Nginx rate limiting for public-facing API endpoints.
+  - Use Symfony Rate Limiter for fine-grained per-user limits.
+  - Monitor API traffic with tools such as Blackfire, Datadog, or New Relic.
+  - Set appropriate JWT token TTLs to minimize exposure from leaked tokens.

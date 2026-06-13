@@ -1,0 +1,69 @@
+aid: sylius
+name: Sylius
+description: Sylius is an open-source headless eCommerce platform built on PHP, Symfony, and API Platform. It provides a comprehensive REST API for managing products, product variants, orders, carts, customers, payments, shipments, promotions, and customizable shop configuration. The API uses JWT authentication and generates OpenAPI documentation automatically, making it well-suited for headless commerce architectures and custom storefront implementations.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/sylius/refs/heads/main/apis.yml
+created: 2026-06-13
+modified: 2026-06-13
+specificationVersion: "0.19"
+tags:
+  - eCommerce
+  - Open Source
+  - Headless Commerce
+  - REST API
+  - Symfony
+  - PHP
+  - Products
+  - Orders
+  - Payments
+  - Shipments
+  - Customers
+apis:
+  - aid: sylius:sylius-api
+    name: Sylius REST API
+    description: The Sylius REST API is built on API Platform and provides endpoints for all core eCommerce operations including product catalog management, order processing, customer management, payment handling, shipment tracking, promotions, and multi-channel shop configuration. Authentication is handled via JWT tokens with separate endpoints for admin and shop users.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.sylius.com/
+    baseURL: https://your-sylius-instance.com/api/v2
+    tags:
+      - eCommerce
+      - Products
+      - Orders
+      - Customers
+      - Payments
+      - Shipments
+    properties:
+      - type: Documentation
+        url: https://docs.sylius.com/
+      - type: OpenAPI
+        url: https://your-sylius-instance.com/api/v2/docs.json
+    contact:
+      - FN: Sylius Support
+        url: https://sylius.com/
+        email: hello@sylius.com
+
+common:
+  - type: Website
+    url: https://sylius.com/
+  - type: Documentation
+    url: https://docs.sylius.com/
+  - type: GitHubOrg
+    url: https://github.com/Sylius
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sylius/
+  - type: Blog
+    url: https://sylius.com/blog/
+  - type: Pricing
+    url: https://sylius.com/
+  - type: X
+    url: https://twitter.com/Sylius
+  - type: Plans
+    url: plans/sylius-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/sylius-rate-limits.yml
+  - type: FinOps
+    url: finops/sylius-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

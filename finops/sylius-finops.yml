@@ -1,0 +1,75 @@
+name: Sylius FinOps Guide
+description: Financial operations considerations for teams deploying and operating Sylius as a headless eCommerce API platform. Covers licensing, infrastructure costs, and cost optimization strategies.
+url: https://sylius.com/
+
+licensing_costs:
+  community_edition:
+    cost: 0
+    license: MIT
+    notes: Free to use, modify, and distribute. No royalties or licensing fees.
+
+  sylius_plus:
+    model: Annual subscription based on Gross Merchandise Volume (GMV)
+    tiers:
+      - name: Rise
+        monthly_eur: 600
+        annual_eur: 7200
+        target: Growing businesses
+      - name: Evolve
+        monthly_eur: 2400
+        annual_eur: 28800
+        target: Scaling businesses with B2B/marketplace needs
+      - name: Beyond
+        pricing: Custom (contact sales)
+        target: Large enterprises
+    base_entry_price_eur: 14900
+    notes: >
+      Individual modules can be licensed separately rather than purchasing the full suite.
+      GMV thresholds affect final pricing; contact Sylius sales for a custom quote.
+    contact: https://sylius.com/
+
+infrastructure_costs:
+  self_hosted:
+    description: Sylius is self-hosted; infrastructure costs are borne by the operator.
+    typical_components:
+      - PHP application server (e.g., AWS EC2, DigitalOcean Droplet, Google Compute Engine)
+      - MySQL or PostgreSQL database
+      - Redis or Memcached for caching
+      - Elasticsearch for product search (optional but recommended for large catalogs)
+      - Object storage for media assets (e.g., AWS S3, Google Cloud Storage)
+      - CDN for static assets and API response caching (e.g., Cloudflare, CloudFront)
+    estimated_monthly_range_usd:
+      small_store: "50–200"
+      medium_store: "200–1000"
+      large_enterprise: "1000+"
+
+  managed_options:
+    - name: Platform.sh
+      description: Offers Sylius-optimized managed PHP hosting with auto-scaling.
+      url: https://platform.sh/
+    - name: Cloudways
+      description: Managed cloud hosting supporting Sylius on AWS, GCP, or DigitalOcean.
+      url: https://www.cloudways.com/
+    - name: Symfony Cloud (SymfonyCloud)
+      description: Managed hosting optimized for Symfony/Sylius applications.
+      url: https://symfony.com/cloud/
+
+cost_optimization:
+  - strategy: Use Community Edition for standard eCommerce
+    description: For most use cases, the MIT-licensed Community Edition provides all necessary API capabilities at zero licensing cost.
+  - strategy: Selective Sylius Plus module licensing
+    description: Purchase only the specific Sylius Plus modules needed rather than the full enterprise bundle.
+  - strategy: Horizontal scaling with caching
+    description: Use Redis, Varnish, or a CDN to cache API responses and reduce compute costs.
+  - strategy: Database optimization
+    description: Index frequently queried fields (product slug, order number, customer email) and use read replicas for API reads.
+  - strategy: Serverless media storage
+    description: Offload product images and assets to S3-compatible object storage to reduce server disk and bandwidth costs.
+
+developer_costs:
+  notes: >
+    As a Symfony-based framework, Sylius requires PHP/Symfony development expertise.
+    Developer costs for custom API development, plugin integration, and maintenance
+    should be factored into total cost of ownership (TCO).
+  community_support: Free via Slack (7,400+ members) and Stack Overflow
+  commercial_support: Available through Sylius Plus and certified Sylius agencies

@@ -1,0 +1,79 @@
+name: Sylius Plans and Pricing
+description: Sylius is an open-source headless eCommerce platform available under the MIT license at no cost. Commercial enterprise features are available via Sylius Plus with modular GMV-based licensing.
+url: https://sylius.com/
+plans:
+  - name: Community Edition
+    description: The core open-source Sylius platform, MIT-licensed and free to use, self-hosted. Includes full REST API via API Platform, product/order/customer management, multi-channel support, and all standard eCommerce features.
+    price: 0
+    currency: USD
+    unit: per month
+    features:
+      - Full REST API (API Platform / JSON-LD)
+      - Product, variant, attribute, and option management
+      - Order and cart management
+      - Customer management
+      - Payment and shipment management
+      - Multi-channel and multi-currency support
+      - Promotions and coupons
+      - Tax categories and rates
+      - Taxon (category) management
+      - JWT authentication (admin and shop endpoints)
+      - OpenAPI/Swagger documentation auto-generated
+      - Symfony-based customization
+    limits:
+      api_rate_limits: Not enforced by the platform (self-hosted)
+      stores: Unlimited (self-hosted)
+      users: Unlimited
+    type: open-source
+
+  - name: Sylius Plus - Rise
+    description: Entry-level commercial Sylius Plus tier for growing businesses. Adds modular enterprise features on top of the Community Edition with annual license pricing based on GMV.
+    price: 600
+    currency: EUR
+    unit: per month (annual subscription, GMV-based)
+    features:
+      - All Community Edition features
+      - OnePageCheckout
+      - Returns Management
+      - Role-Based Access Control (RBAC)
+      - Partial Shipment
+      - Dedicated Sylius technical support
+      - Dedicated Success Manager
+    type: commercial
+
+  - name: Sylius Plus - Evolve
+    description: Mid-tier commercial Sylius Plus license for scaling businesses with advanced B2B and marketplace capabilities.
+    price: 2400
+    currency: EUR
+    unit: per month (annual subscription, GMV-based)
+    features:
+      - All Rise tier features
+      - B2B Suite
+      - Advanced Multi-store
+      - Multi-source Inventory
+      - Loyalty System
+      - Product Configurator
+      - Request for Quotation
+      - Subscription management
+    type: commercial
+
+  - name: Sylius Plus - Beyond
+    description: Enterprise-grade tier with fully customized pricing based on GMV and specific enterprise requirements. Includes all modules and dedicated enterprise support.
+    price: Contact for pricing
+    currency: EUR
+    unit: per year (custom, GMV-based)
+    features:
+      - All Evolve tier features
+      - Marketplace Suite
+      - All 11 Sylius Plus modules
+      - Custom enterprise SLA
+      - Priority support
+      - Custom onboarding
+    type: enterprise
+
+notes:
+  - Sylius Plus licensing is based on Gross Merchandise Volume (GMV) processed through the platform.
+  - Modules can be purchased individually rather than as a full bundle.
+  - Base annual price for Sylius Plus starts around 14,900 EUR/year.
+  - Self-hosted deployment; Sylius does not offer a managed SaaS API tier.
+  - No API call limits or rate throttling are imposed by Sylius itself; limits depend on hosting infrastructure.
