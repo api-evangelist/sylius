@@ -3,12 +3,19 @@
   "feeds": [
     {
       "source": "https://sylius.com/blog/",
-      "feed_url": "https://sylius.com/blog/",
-      "title": "Sylius Blog",
-      "saved": 5,
-      "method": "html"
+      "feed_url": "https://sylius.com/feed/",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.linkedin.com/company/sylius/",
+      "feed_url": "https://www.linkedin.com/company/sylius/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 5,
-  "fetched": "2026-06-13T00:00:00Z"
+  "post_count": 6,
+  "fetched": "2026-06-14T20:42:17Z"
 }
