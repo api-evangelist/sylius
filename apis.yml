@@ -1,7 +1,7 @@
 aid: sylius
 name: Sylius
 description: Sylius is an open-source headless eCommerce platform built on PHP, Symfony, and API Platform. It provides a comprehensive REST API for managing products, product variants, orders, carts, customers, payments, shipments, promotions, and customizable shop configuration. The API uses JWT authentication and generates OpenAPI documentation automatically, making it well-suited for headless commerce architectures and custom storefront implementations.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/sylius/refs/heads/main/apis.yml
 created: 2026-06-13
 modified: 2026-06-13
@@ -22,7 +22,7 @@ apis:
   - aid: sylius:sylius-api
     name: Sylius REST API
     description: The Sylius REST API is built on API Platform and provides endpoints for all core eCommerce operations including product catalog management, order processing, customer management, payment handling, shipment tracking, promotions, and multi-channel shop configuration. Authentication is handled via JWT tokens with separate endpoints for admin and shop users.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.sylius.com/
     baseURL: https://your-sylius-instance.com/api/v2
     tags:
