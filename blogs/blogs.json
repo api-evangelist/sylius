@@ -2,20 +2,17 @@
   "repo": "sylius",
   "feeds": [
     {
-      "source": "https://sylius.com/blog/",
+      "source": "https://sylius.com/feed/",
       "feed_url": "https://sylius.com/feed/",
       "title": "",
-      "saved": 1,
-      "method": "discovered"
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.linkedin.com/company/sylius/",
-      "feed_url": "https://www.linkedin.com/company/sylius/",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "error": "HTTPError"
     }
   ],
-  "post_count": 6,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 7,
+  "fetched": "2026-06-27T12:03:07Z"
 }
