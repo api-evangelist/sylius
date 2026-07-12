@@ -43,6 +43,8 @@ apis:
         email: hello@sylius.com
 
 common:
+  - type: DomainSecurity
+    url: security/sylius-domain-security.yml
   - type: Website
     url: https://sylius.com/
   - type: Documentation
