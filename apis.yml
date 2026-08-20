@@ -19,6 +19,18 @@ created: 2026-06-13
 modified: 2026-06-13
 specificationVersion: '0.23'
 tags:
+  - E-Commerce
+  - Open-Source
+  - Headless Commerce
+  - REST API
+  - Symfony
+  - PHP
+  - Product
+  - Order
+  - Payments
+  - Shipments
+  - Customers
+tags_raw:
   - eCommerce
   - Open Source
   - Headless Commerce
@@ -38,6 +50,13 @@ apis:
     humanURL: https://docs.sylius.com/
     baseURL: https://your-sylius-instance.com/api/v2
     tags:
+      - E-Commerce
+      - Product
+      - Order
+      - Customers
+      - Payments
+      - Shipments
+    tags_raw:
       - eCommerce
       - Products
       - Orders
