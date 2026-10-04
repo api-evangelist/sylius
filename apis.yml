@@ -31,7 +31,7 @@ modified: 2026-06-13
 specificationVersion: '0.23'
 tags:
   - E-Commerce
-  - Open-Source
+  - Open Source
   - Headless Commerce
   - REST API
   - Symfony
@@ -53,6 +53,7 @@ tags_raw:
   - Payments
   - Shipments
   - Customers
+  - Open-Source
 apis:
   - aid: sylius:sylius-api
     name: Sylius REST API
