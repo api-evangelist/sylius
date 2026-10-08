@@ -81,3 +81,40 @@ notes:
   - Base annual price for Sylius Plus starts around 14,900 EUR/year.
   - Self-hosted deployment; Sylius does not offer a managed SaaS API tier.
   - No API call limits or rate throttling are imposed by Sylius itself; limits depend on hosting infrastructure.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - negotiated
+  - subscription
+  units: []
+  plans:
+  - name: Community Edition
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Sylius Plus - Rise
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Sylius Plus - Evolve
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Sylius Plus - Beyond
+    access: enterprise
+    model: negotiated
+    model_how: derived
+    units:
+    - other
+    periods: []
