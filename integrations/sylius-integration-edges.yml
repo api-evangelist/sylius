@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/sylius/integrations
+- https://n8n.io/integrations/sylius/
+- https://composio.dev/toolkits/sylius
+- https://monid.ai/tools/sylius
+checked:
+- https://composio.dev/toolkits/sylius
+- https://monid.ai/tools/sylius
+- https://n8n.io/integrations/sylius/
+- https://zapier.com/apps/sylius/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
