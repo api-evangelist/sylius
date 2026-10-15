@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/sylius/integrations
 - https://n8n.io/integrations/sylius/
@@ -10,7 +10,25 @@ checked:
 - https://monid.ai/tools/sylius
 - https://n8n.io/integrations/sylius/
 - https://zapier.com/apps/sylius/integrations
+- stripe/integrations/stripe-integration-edges.yml
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Stripe (own)
+  partner: stripe
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.stripe.com/apps/sylius
+  mirror_of: stripe/integrations/stripe-integration-edges.yml
+  apps:
+  - Sylius
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  category: commerce
 templates: []
